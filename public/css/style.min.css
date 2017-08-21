@@ -1,0 +1,15 @@
+/**
+ * Description: 公共css
+ * Created by yangxiangming@live.com on 16/4/7.
+ */
+
+*,html{
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+body{
+    font-family:"Microsoft Sans Serif";
+    font-size:12px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index yaf</title>
+</head>
+<style>
+    .highlight{
+        color: red;
+    }
+</style>
+<body>
+Successful:<?php echo $message; ?>
+</body>
+</html>
+<script type="text/javascript">
+    function getArea(v,s){
+        $.ajax({
+            type:"POST",
+            data:$.param({id:v}),
+            url:"index/area",
+            dataType:'json',
+            success:function(data){
+                var html = '';
+                if(data.status == 1){
+                    $.each(function (){
+                        html += '<option value="'+data[i].id+'">'+data[i].areaName+'</option>';
+                    })
+                    $('#'+s).children('option').eq(0).append(html);
+                } else {
+                    conlose.log(data.message);
+                }
+            }
+        });
+    }
+
+    ;(function($){
+        var _key = $('input[name="search"]').val();
+        $('.list-data').highlight(_key);
+    }(jQuery));
+</script>
